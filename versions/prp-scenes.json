@@ -1,13 +1,20 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "changes": [
-    "Added accent color configuration for the UI."
+    "Fixed missing locales in scenes UI.",
+    "Fixed graffiti showing up in scene history."
   ],
   "filesAffected": [
-    "editable/cl_config.lua",
     "client/creator.lua",
-    "fxmanifest.lua",
+    "client/nui.lua",
+    "locales/en.json",
+    "locales/es.json",
+    "locales/br.json",
+    "locales/sv.json",
+    "server/main.lua",
     "ui/assets/index.css",
-    "ui/assets/index.js"
+    "ui/assets/index.js",
+    "ui/index.html",
+    "fxmanifest.lua"
   ]
 }
