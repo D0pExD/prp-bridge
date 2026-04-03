@@ -1,5 +1,10 @@
 {
-  "version": "1.0.0",
-  "changes": [],
-  "filesAffected": []
+  "version": "1.0.1",
+  "changes": [
+      "Fixed incorrect permission for creating tracks"
+  ],
+  "filesAffected": [
+      "server/classes/user.lua",
+      "server/editable.lua"
+  ]
 }
