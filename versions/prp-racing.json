@@ -1,10 +1,12 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "changes": [
-      "Fixed incorrect permission for creating tracks"
+      "Added server config option to disable race of the hour generation",
+      "Fixed not verifying player has currency before removing it"
   ],
   "filesAffected": [
-      "server/classes/user.lua",
-      "server/editable.lua"
+      "server/classes/race.lua",
+      "server/editable.lua",
+      "sv_config.lua"
   ]
 }
