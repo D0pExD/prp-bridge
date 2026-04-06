@@ -290,14 +290,10 @@ function inv.returnItems(src, loadout)
     local storedItems = playerInventories[identifier]
     if not storedItems then return lib.print.debug('No stored items for identifier:', identifier) end
 
-    for _, item in pairs(loadout) do
-        lib.print.debug('Removing loadout item from source:', src, 'item:', item)
-        inv.removeItem(src, item.name, item.count)
-    end
+    tgiann:ClearInventory(src)
 
     Wait(0)
     for _, item in pairs(storedItems) do
-        lib.print.debug('Restoring item to source:', src, 'item:', item)
         inv.addItem(src, item.name, item.count, item.metaData)
     end
 

@@ -193,14 +193,10 @@ function inv.returnItems(src, loadout)
     local storedItems = playerInventories[identifier]
     if not storedItems then return lib.print.debug('No stored items for identifier:', identifier) end
 
-    for _, item in pairs(loadout) do
-        lib.print.debug('Removing loadout item from source:', src, 'item:', item)
-        ox_inventory:RemoveItem(src, item.name, item.count, nil, nil, nil, true)
-    end
+    ox_inventory:ClearInventory(src)
 
     Wait(0)
     for _, item in pairs(storedItems) do
-        lib.print.debug('Restoring item to source:', src, 'item:', item)
         ox_inventory:AddItem(src, item.name, item.count, item.metaData or {})
     end
 
