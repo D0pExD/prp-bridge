@@ -30,7 +30,7 @@ function phone.sendCoords(src, from, coords)
     local result = exports.yseries:SendMessageTo(
         tostring(from):gsub("-", ""),
         phoneNumber,
-        message or '',
+        message or 'Location',
         json.encode({
             {
                 location = {
