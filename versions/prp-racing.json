@@ -1,12 +1,9 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "changes": [
-      "Added server config option to disable race of the hour generation",
-      "Fixed not verifying player has currency before removing it"
+      "Added SQL file to recreate tables incase any tables aren't created properly"
   ],
   "filesAffected": [
-      "server/classes/race.lua",
-      "server/editable.lua",
-      "sv_config.lua"
+      "races.sql"
   ]
 }
